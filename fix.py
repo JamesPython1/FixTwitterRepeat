@@ -13,6 +13,12 @@ twitter = Twython(
     access_token,
     access_token_secret,
 )
-fg = str(random.randint(50,5000000))
+
+listofnum = list(range(1,1000000))
+numb = random.choice(listofnum)
+print(numb)
+fg = str(numb)
+listofnum.remove(numb)
+
 message = str(fg + " [PUT YOUR TEXT HERE]")
 twitter.update_status(status=message)
